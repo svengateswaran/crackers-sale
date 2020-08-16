@@ -1,6 +1,63 @@
+@font-face {
+  font-family: Alata;
+  src: url(fonts/Alata/Alata-Regular.ttf);
+}
+
+body {
+  font-family: Alata;
+  width:100%;
+  height:100%;
+  margin:0px;
+}
+
+header {
+  height:100px;
+  line-height:100px;
+  width:100%;
+  text-align:center;
+  font-size:30px;
+  border-bottom:1px solid #ccc;
+}
+
+footer {
+  height:50px;
+  line-height:50px;
+  text-align:center;
+  width:100%;
+  font-size:20px;
+  border-top:1px solid #ccc;
+}
+
+#container {
+  height:calc(100% - 162px);
+  width:100%;
+}
+
+#content-container {
+  width: 60%;
+  margin:10px auto;
+  text-align:center;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #C4001A;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Alata;
+  font-size: 18px;
+}
+
+table, td, th {
+  border: 1px solid black;
+  margin:10px auto;
+}
+
 table {
   border-collapse: collapse;
-  width: 100%;
 }
 
 th, td {
@@ -11,7 +68,7 @@ th, td {
 tr:nth-child(even){background-color: #f2f2f2}
 
 th {
-  background-color: #4CAF50;
+  background-color: #C4001A;
   color: white;
 }
 
