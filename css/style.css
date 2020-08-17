@@ -43,7 +43,7 @@ td input[type=text] {
   font-size:15px;
   font-family: Alata;
   margin:0px;
-  width:50px;
+  width:100%;
 }
 
 input[type=button], input[type=submit], input[type=reset] {
@@ -78,5 +78,13 @@ tr:nth-child(even){background-color: #f2f2f2}
 th {
   background-color: #C4001A;
   color: white;
+  text-align:center;
 }
 
+.numbers {
+  text-align:right;
+}
+
+.in_qty {
+  text-align:right;
+}
