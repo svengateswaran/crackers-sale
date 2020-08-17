@@ -34,8 +34,8 @@ footer {
 }
 
 #content-container {
-  width: calc(100%-20px);
-  margin:10px;
+  width: 100%;
+  margin:10px auto;
   text-align:center;
 }
 
