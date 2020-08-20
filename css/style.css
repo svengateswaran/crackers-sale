@@ -9,6 +9,8 @@ body {
   width:100%;
   height:100%;
   margin:0px;
+  background:#000;
+  color:#fff;
 }
 
 header {
@@ -32,6 +34,8 @@ footer {
 #container {
   height:calc(100% - 162px);
   width:100%;
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
 
 #content-container {
@@ -60,7 +64,7 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 table, td, th {
-  border: 1px solid black;
+  border: 1px solid #fff;
   margin:10px auto;
   font-size:15px;
 }
@@ -75,12 +79,16 @@ th, td {
   padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){background-color: #222}
 
 th {
   background-color: #C4001A;
   color: white;
   text-align:center;
+}
+
+#contact {
+  border:none;
 }
 
 .numbers {
@@ -91,3 +99,33 @@ th {
 .in_qty {
   text-align:right;
 }
+
+.header_images {
+  width:80px;
+  height:80px;
+  margin:10px 20px;
+}
+#header_image_left {
+  float:left;
+}
+
+#header_image_right {
+  float:right;
+}
+
+#product-list {
+  display:block;
+}
+/*
+#cart {
+  display:None;
+}
+
+#contact {
+  display:None;
+}
+
+#order-status {
+  display:None;
+}
+*/

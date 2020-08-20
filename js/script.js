@@ -24,8 +24,8 @@ function CalculateTotal() {
   content_table.rows[num_rows-1].cells[1].innerHTML = discount_total.toFixed(2) ;
 }
 
-function qtyChange(current_node) {
-  console.log("qtyChange");
+function QuantityChange(current_node) {
+  console.log("QuantityChange");
   var childnodes = current_node.parentNode.parentNode.childNodes;
   var per_rate = parseFloat(childnodes[childnodes.length-6].innerHTML);
   var qty_cell = current_node.value;
@@ -38,4 +38,44 @@ function qtyChange(current_node) {
     amount_cell.innerHTML = "";
   }
   CalculateTotal();
+}
+
+function ToggleDivDisplay(disapper_div, appear_div) {
+  /*
+  document.getElementById(disapper_div).style.display = "None";
+  document.getElementById(appear_div).style.display = "block";
+  */
+}
+
+function AddToCart() {
+  ToggleDivDisplay("product-list", "cart");
+}
+
+function Checkout() {
+  ToggleDivDisplay("cart", "contact");
+}
+
+function PlaceOrder() {
+  ToggleDivDisplay("contact", "result");
+  var customer_name = document.getElementById("customer-name").value;
+  var customer_phone = document.getElementById("customer-phone").value;
+  var customer_email = document.getElementById("customer-email").value;
+  var customer_address = document.getElementById("customer-address").value;
+  $.post("order.php", { 
+    name: customer_name,
+    phone: customer_phone,
+    email: customer_email,
+    address: customer_address
+    }, function(data, status){
+      $("#order-status").html(data);
+  });
+}
+
+function GoToHome() {
+  /*
+  document.getElementById("product-list").style.display = "block";
+  document.getElementById("cart").style.display = "None";
+  document.getElementById("contact").style.display = "None";
+  document.getElementById("result").style.display = "None";
+  */
 }
