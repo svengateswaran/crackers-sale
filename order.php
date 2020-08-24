@@ -2,27 +2,28 @@
 
 $cus_name = $_POST["name"];
 $cus_phone = $_POST["phone"];
+$cart_table = $_POST["cart_table"];
 
-echo $cus_name;
-echo "<br>";
-echo $cus_phone;
+//echo $cus_name;
+//echo "<br>";
+//echo $cus_phone;
+//echo "<br>";
 
 $email = "";
-$name = "";
-$email_from = "";
-$name_from = "";
+$name = "Test";
+$email_from = "order@pyrotechtraders.rf.gd";
+$name_from = "PyroTech Traders";
 $email_password = "";
 
 if ($email) {
-  $HOME_DIR = "/Users/vengat/vengat/crackers-sale/";
 
-  require($HOME_DIR . "libs/PHPMailer/src/Exception.php");
-  require($HOME_DIR . "libs/PHPMailer/src/PHPMailer.php");
-  require($HOME_DIR . "libs/PHPMailer/src/SMTP.php");
+  require("./libs/PHPMailer/src/Exception.php");
+  require("./libs/PHPMailer/src/PHPMailer.php");
+  require("./libs/PHPMailer/src/SMTP.php");
 
   $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
-  $send_using_gmail = 1;
+  $send_using_gmail = 0;
 
   //Send mail using gmail
   if($send_using_gmail){
@@ -43,7 +44,8 @@ if ($email) {
   $mail->SetFrom($email_from, $name_from);
   $mail->Subject = "Order";
   $message = "<h3>" . $cus_name . "</h3>";
-  $message = $message . "<br><h3>" . $cus_phone . "</h3>";
+  $message = $message . "<h3>" . $cus_phone . "</h3>";
+  $message = $message . $cart_table;
   $mail->Body = $message;
   $mail->IsHTML(true);
 

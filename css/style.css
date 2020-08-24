@@ -23,18 +23,18 @@ header {
 }
 
 footer {
-  height:50px;
-  line-height:50px;
+  height:35px;
+  line-height:35px;
   text-align:center;
   width:100%;
-  font-size:20px;
+  font-size:15px;
   border-top:1px solid #ccc;
 }
 
 #container {
-  height:calc(100% - 162px);
+  height:calc(100% - 137px);
   width:100%;
-  overflow-y:scroll;
+  overflow-y:auto;
   overflow-x:hidden;
 }
 
@@ -105,18 +105,26 @@ th {
   height:80px;
   margin:10px 20px;
 }
-#header_image_left {
+
+#discount_image {
+  width:80px;
+  height:80px;
+  margin:10px 20px;
+  float:right;
+}
+
+.header_image_left {
   float:left;
 }
 
-#header_image_right {
+.header_image_right {
   float:right;
 }
 
 #product-list {
   display:block;
 }
-/*
+
 #cart {
   display:None;
 }
@@ -125,7 +133,15 @@ th {
   display:None;
 }
 
-#order-status {
+#result {
   display:None;
 }
-*/
+
+#order-status {
+  margin:15px;
+}
+
+.heading {
+  font-size:22px;
+  margin:15px;
+}

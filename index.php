@@ -8,13 +8,14 @@
 </head>
 <body>
   <header> 
-  <img id="header_image_left" class="header_images" src="images/sparklers_icon.png">
+  <img class="header_images header_image_left" src="images/sparklers_icon.png">
   PyroTech Traders
-  <img id="header_image_right" class="header_images" src="images/bombs_icon.png">
+  <img id="discount_image" src="images/50_off.png">
   </header>
   <div id="container">
   <div id="content-container">
   <div id="product-list">
+  <div class="heading"> Product List </div>
   <table id="content">
     <tr> <th>S.No</th> <th>Name of Crackers</th> <th>Num Pcs</th> <th>Per Rate</th> <th>Qty</th> <th>Amount</th> </tr>
     <tr> <td class="numbers">1</td>
@@ -41,6 +42,7 @@
   </div>
   
   <div id="cart">
+  <div class="heading"> Cart </div>
   <table id="cart-table">
     <tr> <th>S.No</th> <th>Name of Crackers</th> <th>Num Pcs</th> <th>Per Rate</th> <th>Qty</th> <th>Amount</th> </tr>
     <tr> <td colspan=4>Total</td>
@@ -57,8 +59,8 @@
   </div>
 
   <div id="contact">
+  <div class="heading"> Contact Information </div>
     <table id="contact-table">
-      <tr> <td colspan=2 style="text-align:center"> <b> Contact Information </b> </td> </tr>
       <tr> <td> Name </td>
            <td> <input type="text" id="customer-name"> </td> </tr>
       <tr> <td> Phone </td>
@@ -76,6 +78,7 @@
   </div>
 
   <div id="result">
+  <div class="heading"> Order Status </div>
      <div id="order-status">Order Status</div>
   <br>
   <input type="button" value="Back To Home" onclick="GoToHome()">
@@ -83,7 +86,7 @@
 
   </div>
   </div>
-  <footer> Copyrights</footer>
+  <footer> Copyrights © PyroTech Traders 2020</footer>
 
 </body>
 </html>
